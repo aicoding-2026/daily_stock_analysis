@@ -43,12 +43,6 @@ jobs:
       
       - name: 执行股票分析
         env:
-          # Gemini AI
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || secrets.GEMINI_MODEL || 'gemini-3-flash-preview' }}
-          GEMINI_MODEL_FALLBACK: ${{ vars.GEMINI_MODEL_FALLBACK || secrets.GEMINI_MODEL_FALLBACK || 'gemini-2.5-flash' }}
-          GEMINI_REQUEST_DELAY: '3.0'  # GitHub Actions 建议增加延时
-          
           # 数据源 (可选)
           TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
           
